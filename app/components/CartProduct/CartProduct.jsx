@@ -4,7 +4,7 @@ const CartProduct = ({ price, quantity, title, onRemoveItem }) => (
   <div className="cart-summary">
     <div className="cart-item">{title}</div>
     <div className="cart-quantity">{quantity}</div>
-    <div className="cart-item-total">{price}</div>
+    <div className="cart-item-total">{price * quantity}</div>
     <div className="cart-action">
       {onRemoveItem &&
         <button
