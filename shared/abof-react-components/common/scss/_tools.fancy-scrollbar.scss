@@ -1,0 +1,22 @@
+$scrollbar-width: 6px;
+
+@mixin fancy-scrollbar-horizontal($padding: null) {
+  @if ($padding) {
+    padding-right: $padding;
+  }
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 2px 0;
+    background-color: $color-gray-light;
+    border-radius: $base-border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-brand-secondary;
+    border-radius: $base-border-radius;
+  }
+}

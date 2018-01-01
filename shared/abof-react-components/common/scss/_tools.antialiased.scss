@@ -1,0 +1,9 @@
+@mixin antialiased {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin reset-antialiased {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}

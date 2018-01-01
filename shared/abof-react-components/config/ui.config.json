@@ -1,0 +1,22 @@
+{
+  "__comment": "Always namespace variables with 'ui-', avoid collision in SCSS files",
+  "ui-breakpoints": {
+    "small":   "0",
+    "medium":  "640",
+    "large":   "1024",
+    "xlarge":  "1200",
+    "xxlarge": "1440"
+  },
+  "ui-colors": {
+    "primary": "#c9048f",
+    "secondary": "#5b49b9",
+    "facebook": "#3b5998",
+    "google": "#ea4335"
+  },
+  "ui-base-font-size": "14",
+  "ui-base-line-height": "18",
+  "ui-base-transition-in-duration": ".3s",
+  "ui-base-transition-out-duration": ".2s",
+  "ui-base-transition-in-function": "ease-out",
+  "ui-base-transition-out-function": "ease-in"
+}

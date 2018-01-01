@@ -1,0 +1,9 @@
+@mixin to-uppercase($size: 82.5%, $letter-spacing: .4) {
+  font-size: $size;
+  letter-spacing: em($letter-spacing);
+  text-transform: uppercase;
+}
+
+@mixin to-lowercase {
+  text-transform: lowercase;
+}

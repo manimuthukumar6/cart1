@@ -1,0 +1,125 @@
+$static-assets-path: false !default;
+$fonts-path: '/public/fonts/';
+
+@if ($static-assets-path) {
+  $fonts-path: '#{$static-assets-path}/fonts/';
+}
+
+@include font-face('Gotham Book', '#{$fonts-path}gotham-book/gotham-book', normal, normal);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  $color-transparent: rgba(0, 0, 0, 0);
+
+  -webkit-tap-highlight-color: $color-transparent;
+  -webkit-tap-highlight-color: transparent; // For some Androids
+}
+
+img {
+  max-width: 100%;
+}
+
+.wf--on {
+  font-family: $base-font-family;
+}
+
+a {
+  color: $color-link;
+
+  /* &:active,
+  &:focus {
+    text-decoration: underline;
+  } */
+}
+
+input,
+select,
+textarea {
+  font-size: rem(14);
+}
+
+input {
+  & {
+    padding: ($qtr-spacing-unit / 2) $qtr-spacing-unit;
+    border: $base-border;
+    border-radius: $base-border-radius;
+  }
+
+  &[type=email],
+  &[type=number],
+  &[type=password],
+  &[type=tel],
+  &[type=text] {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $color-gray-lighter;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+p {
+  margin-bottom: $base-spacing-unit;
+}
+
+// Text Utilily Classes
+
+.text--mini {
+  font-size: modular-scale(-1);
+  line-height: $base-spacing-unit;
+}
+
+.text--micro {
+  font-size: modular-scale(-2);
+  line-height: $base-spacing-unit;
+}
+
+.text--align-right {
+  text-align: right;
+}
+
+.text--align-center {
+  text-align: center;
+}
+
+.text--float-right {
+  float: right;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.text--light {
+  color: $color-body-text-light;
+}
+
+.text--util-error {
+  color: $color-util-error;
+}
+
+.text--util-info {
+  color: $color-util-info;
+}
+
+.text--util-success {
+  color: $color-util-success;
+}
+
+.text--util-warning {
+  color: $color-util-warning;
+}

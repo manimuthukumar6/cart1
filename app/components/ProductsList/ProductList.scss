@@ -1,0 +1,22 @@
+// settings
+@import '../../../shared/abof-react-components/common/scss/settings.core';
+@import '../../scss/settings.project';
+
+// tools
+@import '../../../shared/abof-react-components/common/scss/tools.core';
+
+.checkout-app {
+  @include outer-container;
+  .product-list {
+    @include bp(large) {
+      @include span-columns(7);
+    }
+  }
+  .cart {
+    padding: $half-spacing-unit;
+    border: 1px solid $gray;
+    @include bp(large) {
+      @include span-columns(5);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# Project/IDE-specific files.
+node_modules/
+.idea/
+session.dev
+dist
+
+# Hidden folders.
+# This takes care of .tmp, .sass-cache, and many others.
+.*/
+
+# OS generated files.
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Common files and folders.
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swn
+*.swo
+*.swp
+._*
+*~
+
+# Archives.
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

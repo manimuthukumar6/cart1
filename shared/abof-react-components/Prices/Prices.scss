@@ -1,0 +1,43 @@
+// settings
+@import '../common/scss/settings.core';
+
+// tools
+@import '../common/scss/tools.core';
+
+.prices {
+  font-size: modular-scale(-1);
+  font-weight: bold;
+  line-height: $base-spacing-unit;
+}
+
+// .prices__price {}
+
+.prices__price--list {
+  color: $color-body-text-light;
+  text-decoration: line-through;
+}
+
+.prices__price--free {
+  text-decoration: line-through;
+}
+
+// .prices__price--selling {}
+
+.prices__discount {
+  color: $color-brand-primary;
+}
+
+.prices--inline {
+  .prices__price,
+  .prices__discount {
+    display: inline;
+  }
+
+  .prices__price + .prices__price {
+    margin-left: $qtr-spacing-unit;
+  }
+
+  .prices__discount {
+    margin-left: $qtr-spacing-unit;
+  }
+}

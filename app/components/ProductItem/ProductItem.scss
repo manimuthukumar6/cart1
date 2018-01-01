@@ -1,0 +1,111 @@
+// settings
+@import '../../../shared/abof-react-components/common/scss/settings.core';
+@import '../../scss/settings.project';
+
+// tools
+@import '../../../shared/abof-react-components/common/scss/tools.core';
+
+.product-item {
+  @include clearfix;
+  float: left;
+  width: (100% / 2);
+  margin-bottom: $half-spacing-unit;
+  transition: opacity $base-transition-in-duration $base-transition-in-function;
+  text-align: center;
+
+  @include bp(medium) {
+    width: (100% / 3);
+  }
+  @include bp(large) {
+    width: (100% / 3);
+  }
+}
+
+.product-item__box {
+  margin: $half-spacing-unit;
+  padding: $half-spacing-unit;
+  border: 1px solid $silver;
+}
+
+.product-item__thumbnail-region {
+  position: relative;
+  display: block;
+  padding-top: 100%; // Aspect Ratio of 300px:300px
+  // margin-bottom: $qtr-spacing-unit;
+  background: $color-gray-lighter;
+}
+
+.product-item__thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.product-item__actions {
+
+}
+
+.product-item__action-label {
+  display: none;
+  font-size: modular-scale(-2);
+
+  @include bp(large) {
+    // display: block;
+  }
+}
+
+.product-item__action {
+  position: relative;
+  display: block;
+  padding: $qtr-spacing-unit;
+  color: $color-gray-base;
+  text-align: center;
+}
+
+.product-item__action--active {
+  .svg-icon {
+    color: $color-brand-primary;
+  }
+}
+
+.product-item__footer {
+  min-height: 3 * $base-spacing-unit;
+}
+
+.product-item__title {
+  height: 2 * modular-scale(1);
+  margin-top: $half-spacing-unit;
+  overflow: hidden;
+  font-size: modular-scale(-1);
+  font-weight: bold;
+  // line-height: $base-spacing-unit;
+  line-height: modular-scale(1);
+  color: $black;
+}
+
+.product-item__brand {
+  height: modular-scale(1);
+  margin-top: $half-spacing-unit;
+  overflow: hidden;
+  font-size: modular-scale(-2);
+  font-weight: bold;
+  // line-height: $base-spacing-unit;
+  line-height: modular-scale(1);
+  color: $black;
+}
+
+.product-item__pack {
+  height: modular-scale(1);
+  margin-top: $half-spacing-unit;
+  overflow: hidden;
+  font-size: modular-scale(-2);
+  font-weight: bold;
+  // line-height: $base-spacing-unit;
+  line-height: modular-scale(1);
+  color: $black;
+}
+
+.product-item__pricing {
+  margin-top: $half-spacing-unit;
+}

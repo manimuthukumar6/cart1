@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>{{ metaData.title }}</title>
+      <meta name="description" content="{{ metaData.description }}">
+      <meta property="og:description" content="{{ metaData.description }}">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="abof">
+      <meta property="og:title" content="{{ metaData.title }}">
+      <meta property="og:url" content="{{ metaData.url }}">
+      {{#each metaData.images}}
+          <meta property="og:image" content="{{ this }}">
+      {{/each}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    {{#if brandPrimaryColor }}
+      <meta name="theme-color" content="{{ brandPrimaryColor }}">
+    {{/if}}
+
+    {{#if cssBundlePath }}
+      <link rel="stylesheet" href="{{ cssBundlePath }}">
+    {{/if}}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ publicPath }}/images/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ publicPath }}/images/apple-touch-icon.png">
+
+    <script>
+      window.__VERSION__ = '{{ appVersion }}';
+      window.__RUNTIME_ENVIRONMENT_CONFIG__ = {{{ runtimeEnvironmentConfig }}};
+      window.__INITIAL_STATE__ = {{{ initialState }}};
+    </script>
+  </head>
+
+  <body>
+    <div id="checkout-app">{{{ body }}}</div>
+    <script src="{{ jsBundlePath }}"></script>
+    <!-- at: {{ renderedAt }} , took: {{ renderDuration }} -->
+  <!-- END TRACKJS -->
+  </body>
+</html>

@@ -1,0 +1,18 @@
+// Sanitize.css
+$root-font-family: Avenir, 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$root-font-size: ($ui-base-font-size / 16) * 100%; // 14px
+$root-line-height: ($ui-base-line-height / $ui-base-font-size); // 18px
+
+// Bourbon
+$em-base: $ui-base-font-size * 1px; // 14px
+
+// Bourbon Neat
+$max-width: 72.14285714em; // 1010px / 14px, from current abof.com
+$gutter: 1.285714286em; // 18px / 14px
+
+// to remove Bourbon warnings
+// remains until we upgrade the versions
+$output-bourbon-deprecation-warnings: false !default;
+
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';

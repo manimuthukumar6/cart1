@@ -1,0 +1,225 @@
+$base-font-family: 'Gotham Book', $root-font-family;
+$base-font-size: $em-base; // 14px
+$base-line-height: $ui-base-line-height * 1px; // same as $root-line-height
+
+$base-spacing-unit: rem(strip-units($base-line-height));
+$half-spacing-unit: $base-spacing-unit / 2;
+$qtr-spacing-unit: $base-spacing-unit / 4;
+
+$modular-scale-ratio: $minor-third;
+// http://www.modularscale.com/?14&&1.2&web&text
+
+// ----------------------------------------------
+// COLOR
+// ----------------------------------------------
+// base
+$white:        #ffffff;
+$black:        #171717;
+$red: #ef4f4f;
+
+$silver:       #eeeded;
+$pink:       #c9048f;
+$gray-lighter:  #989898;
+$gray:          #cccccc;
+$black-lighter : #404040;
+$gray-darker:  #6c6c6c;
+$purple:       #534795;
+// $blue:         #27b7f2;
+// $blue-voilet:  #4d81fb;
+// $blue-lighter: #76a5ce;
+// $green:        #42d383;
+// $green-text:   #258751;
+// $red:          #cb1f12;
+// $red-text:     #ca2011;
+// $purple:       #8e4dfb;
+// $purple-text:  #3e78bf;
+// $orange:       #fd7822;
+
+// Brand color
+$color-brand-primary:         map-get($ui-colors, primary);
+$color-brand-primary-hover:   lighten(desaturate(adjust-hue($color-brand-primary, -0.3824), 14.6816), 15.4902); // #ea32b5
+$color-brand-secondary:       map-get($ui-colors, secondary);
+$color-brand-secondary-hover: desaturate(lighten($color-brand-secondary, 5), 2);
+$color-brand-google:          map-get($ui-colors, google);
+$color-brand-facebook:        map-get($ui-colors, facebook);
+
+// grays
+$color-gray-base:    $black;
+$color-gray-dark:    lighten($color-gray-base, 16%); // #404040
+$color-gray:         lighten($color-gray-base, 40.6%); // #7f7f7f
+$color-gray-light:   lighten($color-gray-base, 70%); // #cacaca
+$color-gray-lighter: lighten($color-gray-base, 82.9%); // #eaeaea
+
+// utility Colors
+$color-util-error:   #ee4f4f;
+$color-util-info:    #27b7f2; // yet to update
+$color-util-success: #76b852;
+$color-util-warning: #533c02;
+$color-util-warning-border: #f6c342;
+
+$color-util-bg-error:   #ffedec;
+$color-util-bg-info:    transparentize($color-util-info, .85);
+$color-util-bg-success: #f0ffe8;
+$color-util-bg-warning: transparentize($color-util-warning-border, .85);
+
+// text colors
+$color-body-text:         $color-gray-base;
+$color-body-text-light:   lighten($color-gray, 20%);
+$color-body-text-dark:    $black;
+$color-body-text-reverse: $color-gray-lighter;
+
+$color-background:                      #ffffff;
+$color-background-translucent:          transparentize($color-background, .25);
+$color-transparent-overlay-background:  transparentize($white, .6);
+$color-overlay-background:              transparentize($black, .75);
+
+$color-link:                   $color-brand-secondary;
+$color-link-hover:             $color-brand-primary-hover;
+
+// Border
+$base-border-color:         $color-gray-light; //darken($color-gray-lighter, 13.5%);
+$base-border-dark-color:    darken($color-gray-light, 13.5%);
+$base-border-active-color:    $color-brand-secondary;
+$base-border-radius:        2px;
+$base-border-radius-circle: 2000px;
+$base-border-style:         solid;
+$base-border-width:         1px;
+$base-border-width-active:  4px;
+
+$base-border:               $base-border-width $base-border-style $base-border-color;
+$base-border-dark:          $base-border-width $base-border-style $base-border-dark-color;
+$base-border-active:        $base-border-width $base-border-style $base-border-active-color;
+
+
+// Transitions
+$base-transition-in-function:         $ui-base-transition-in-function;
+$base-transition-out-duration:        $ui-base-transition-out-duration;
+$base-transition-in-duration:         $ui-base-transition-in-duration;
+$base-transition-out-function:        $ui-base-transition-out-function;
+
+// Shadows
+$base-shadow-color: rgba(0, 0, 0, .2);
+$base-box-shadow-l0: 0 1px 3px $base-shadow-color;
+$base-box-shadow-l1: 0 3px 5px $base-shadow-color;
+$base-box-shadow-l2: 0 5px 7px $base-shadow-color;
+
+// z-index management
+// It's managed by Sass Index Method
+// Usage: // .myclass { z-index: z-index($z-indices, component_name); }
+// Top most start with index of 1 and lowest component will have highest index
+$z-indices:
+slingshot,
+snackbar-container,
+overlay,
+site-header;
+
+//
+// Important Note
+//
+// Add 200 and use
+// In order to have project components to have z-index range, we have kept 100 to 200
+// for project specific components. For the components which needed to stay on top
+// all, use this higher-range. But, while using add 200 with the index.
+$z-indices-higher:
+modal;
+
+// ----------------------------------------------
+// Component Settings
+// ----------------------------------------------
+
+// Avatar
+$avatar--size-small:  22px;
+$avatar--size-medium: 33px;
+$avatar--size-large:  55px;
+
+// Button
+$button--color-primary:        $color-brand-primary;
+$button--color-primary-hover:  $color-brand-primary-hover;
+$button--color-primary-active: darken(saturate(adjust-hue($color-brand-primary, -4.6387), 0.1050), 9.2157); // #9b037a
+
+$button--color-secondary:        lighten(saturate(adjust-hue($color-gray-base, 0.0000), 0.0000), 16.0784); // #404040
+$button--color-secondary-hover:  lighten(saturate(adjust-hue($color-gray-base, 0.0000), 0.0000), 40.7843); // #7f7f7f
+$button--color-secondary-active: darken(saturate(adjust-hue($color-gray-base, 0.0000), 0.0000), 9.0196); // #000000
+
+$button--color-tertiary:        $color-gray-lighter;
+$button--color-tertiary-hover:  lighten($button--color-tertiary, 5);
+$button--color-tertiary-active: darken($button--color-tertiary, 6);
+
+$button--color-facebook:        $color-brand-facebook;
+$button--color-facebook-hover:  lighten($button--color-facebook, 5);
+$button--color-facebook-active: darken($button--color-facebook, 6);
+
+$button--color-google:        $color-util-error;
+$button--color-google-hover:  lighten($button--color-google, 5);
+$button--color-google-active: darken($button--color-google, 6);
+
+$button--color-email:        $color-gray-light;
+$button--color-email-hover:  lighten($color-gray-light, 5);
+$button--color-email-active: darken($color-gray-light, 6);
+
+// Caret
+$caret--size: $half-spacing-unit;
+
+// Checkbox
+$checkbox--size:       18px;
+$checkbox--size-large: 24px;
+$checkbox--radius: $base-border-radius;
+
+// Loader
+$loader--size-tiny:   14px;
+$loader--size-small:  18px;
+$loader--size-medium: 24px;
+$loader--size-large:  32px;
+
+// Logo
+$logo--width-medium: 44;
+$logo--width-small:  32;
+$logo--width-large:  72;
+
+// PaymentIcon
+$payment-icon--height-small: 22px;
+$payment-icon--height:       28px;
+$payment-icon--height-large: 36px;
+
+// Snackbar
+$snack-bar--height: $base-spacing-unit * 3;
+
+// SvgIcon
+$svg-icon--size-tiny:    16px;
+$svg-icon--size-small:   18px;
+$svg-icon--size:         24px;
+$svg-icon--size-large:   32px;
+$svg-icon--size-xlarge:  64px;
+$svg-icon--size-xxlarge: 128px;
+
+// Swatch
+$swatch-size: $svg-icon--size;
+$swatch-size--small: $svg-icon--size-small;
+$swatch-radius: $base-border-radius;
+
+// Triangle
+// Used in dropdown, filter--secondary,…
+$base-triangle-size: 14px;
+
+// overlay
+$modal-overlay: rgba(0,0,0,.75);
+
+// Site header
+// $site-header--height: $base-spacing-unit * 3;
+$site-header--height: $base-spacing-unit * 4;
+$minor-site-header--height: $base-spacing-unit * 1.5;
+
+// $site-header-container--small-screen-height: $site-header--height + rem(1); // Extra 2 pixels for borders in each components
+$site-header-container--small-screen-height: $site-header--height - rem(5); // 1px bottom border
+$site-header-container--large-screen-height: $site-header--height + $minor-site-header--height - rem(3); // Extra 3 pixels for borders in each components
+
+// Transitions
+$base-transition-function:      .3s;
+$base-transition-duration:      .3s;
+$base-transition-fast-duration: .2s;
+
+// new header values
+$border-color: #ced7e0;
+$bg-color: #e9edf0;
+$font-color: #7f7f7f;
+$font-bold-color: #171717;

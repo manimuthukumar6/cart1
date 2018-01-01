@@ -1,0 +1,29 @@
+
+// Restricted Site Header
+$stage-header--height: $base-spacing-unit * 2.3;
+$stage-notification--height: $base-spacing-unit * 1.25;
+
+$stage-header--z-index: 100;
+$stage-notification--z-index: 101;
+
+$static-assets-path: '/checkout/public';
+
+
+
+// for new autosuggest in header
+$border-color: #ced7e0;
+$bg-color: #e9edf0;
+$font-color: #7f7f7f;
+$font-bold-color: #171717;
+$secondary-color: #5b49b9;
+
+// TODO: neutralize this chaos(1)
+// +++++++
+$new-designer-gray: #cacaca;
+
+// from
+$hover-badge-width: rem(16);
+
+// +++++++
+// chaos(1) ends
+// +++++++

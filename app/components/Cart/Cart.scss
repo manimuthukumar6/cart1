@@ -1,0 +1,46 @@
+// settings
+@import '../../../shared/abof-react-components/common/scss/settings.core';
+@import '../../scss/settings.project';
+
+// tools
+@import '../../../shared/abof-react-components/common/scss/tools.core';
+
+.cart-total {
+  @include row;
+  margin-bottom: $half-spacing-unit;
+  border-bottom: 1px solid $gray;
+
+  .cart-total-left {
+    @include span-columns(6);
+  }
+
+  .cart-total-right {
+    @include span-columns(5);
+  }
+}
+
+.cart-summary {
+  @include row;
+  padding: $half-spacing-unit 0;
+
+  .cart-item {
+    @include span-columns(5);
+  }
+
+  .cart-quantity {
+    @include span-columns(2);
+    text-align: center;
+  }
+
+  .cart-item-total {
+    @include span-columns(2);
+  }
+
+  .cart-action {
+    @include span-columns(3);
+  }
+}
+
+.notify-error {
+  color: $red;
+}

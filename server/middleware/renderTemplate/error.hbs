@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>{{ errorTitle }} | abof.com</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ brandPrimaryColor }}">
+
+  <link rel="stylesheet" href="{{ cssBundlePath }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ publicPath }}/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="{{ publicPath }}/images/apple-touch-icon.png" />
+
+  <script>
+    window.__VERSION__ = '{{ appVersion }}';
+    window.__PATHS__ = {{ paths }};
+    window.__INITIAL_STATE__ = {{ initialState }};
+  </script>
+</head>
+
+<body>
+<div id="checkoutApp">
+  <h1>{{ errorTitle }}</h1>
+  <p>{{ errorText }}</p>
+</div>
+<!-- at: {{ renderedAt }} , took: {{ renderDuration }} -->
+</body>
+</html>
