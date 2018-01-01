@@ -65,7 +65,7 @@ const getEnvironment = overrides => {
 
   /* Collect information from the environment */
   const projectRoot = getProjectRoot();
-  const projectVersion = '123';// getProjectVersion();
+  const projectVersion = getProjectVersion();
 
   /* These variables can't be overridden */
   /* If you put a '/' at the end of the public path, none of the assets will be served properly.

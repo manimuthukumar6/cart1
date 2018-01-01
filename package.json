@@ -1,14 +1,16 @@
 {
-  "name": "abof-checkout",
+  "name": "cart1",
   "version": "2.0.0",
   "description": "Checkout process for abof.com.",
   "scripts": {
-    "dev": "PORT=3001 RUNTIME_ENVIRONMENT=sit gulp",
+    "start": "node dist/production/abof-checkout.${VERSION}.server.js",
+    "postinstall": "gulp default",
+    "dev": "gulp",
     "qa": "PORT=3001 RUNTIME_ENVIRONMENT=qa gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/aboftech/abof-checkout.git"
+    "url": "git+ssh://github.com/manimuthukumar6/cart1.git"
   },
   "contributors": [
     "Manimuthukumar <manimuthukumar6@gmail.com>"
@@ -41,7 +43,6 @@
     "eslint-plugin-react": "5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "fontfaceobserver": "^1.7.1",
-    "gulp": "^3.9.1",
     "gulp-eslint": "2.0.0",
     "gulp-flatten": "^0.2.0",
     "gulp-nodemon": "^2.0.7",
@@ -77,6 +78,7 @@
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "gulp": "^3.9.1",
     "google-maps": "^3.2.1",
     "handlebars": "^4.0.5",
     "immutable": "3.8.1",
