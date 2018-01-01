@@ -25,7 +25,7 @@ const run = () => {
   }
 
   // const serviceabilityApi = storeConf.getServiceabilityConfig();
-  /*server.use(proxy({
+  /* server.use(proxy({
     host: serviceabilityApi.host,
     map: {
       '/checkout/serviceability/cart': serviceabilityApi.path
@@ -77,8 +77,13 @@ const run = () => {
 
 const STORE_CONF_RESET_INTERVAL = 60 * 60 * 1000;/* mintues * seconds * milliseconds */
 // setInterval(storeConf.setStoreConf, STORE_CONF_RESET_INTERVAL);
+const http = require('http');
+setInterval(() => {
+  http.get('https://polar-retreat-62077.herokuapp.com/');
+  console.log('runing...timer..');
+}, 300000); // every 5 minutes (300000)
 
-/*storeConf
+/* storeConf
   .setStoreConf()
   .then(run)
   .catch(e => {

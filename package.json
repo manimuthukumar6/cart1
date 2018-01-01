@@ -4,7 +4,7 @@
   "description": "Checkout process for abof.com.",
   "scripts": {
     "start": "node dist/production/abof-checkout.${VERSION}.server.js",
-    "postinstall": "gulp default",
+    "postinstall": "NODE_ENV=production gulp build",
     "dev": "gulp",
     "qa": "PORT=3001 RUNTIME_ENVIRONMENT=qa gulp"
   },
