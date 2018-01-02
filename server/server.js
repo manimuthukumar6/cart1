@@ -77,7 +77,7 @@ const run = () => {
 
 const STORE_CONF_RESET_INTERVAL = 60 * 60 * 1000;/* mintues * seconds * milliseconds */
 // setInterval(storeConf.setStoreConf, STORE_CONF_RESET_INTERVAL);
-const http = require('http');
+const http = require('https');
 setInterval(() => {
   http.get('https://polar-retreat-62077.herokuapp.com/');
   console.log('runing...timer..');
